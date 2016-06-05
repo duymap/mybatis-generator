@@ -6,7 +6,7 @@ Usage:
 - Open and configure in config.xml
 	* Include your jdbc driver library in build.gradle
 	* Change attributes in <jdbcConnection> tag to connect to your database. My exmaple using mySQL
-- Add your tables in your schema to generate code by adding block code below in config.xml. In this example, I just only have one table called 'user', there is one or more tables in schema, how many tables you want to generate code (xml, entities, mapper ) , how many <table> <table> tags that you should add.
+- Add your tables in your schema to generate code by adding block code below in config.xml. In this example, I just only have one table called 'user', there is one or more tables in schema, how many tables you want to generate code (xml, entities, mapper ) , how many tags "<table>" that you should add.
 ```
 <table schema="your-schema" tableName="user" domainObjectName="User">
     	<property name="useActualColumnNames" value="false"/>
