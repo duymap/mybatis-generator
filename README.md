@@ -1,5 +1,5 @@
 #MyBatis generator project
-### This is used to generate xml, mapper and java entities based on configuration in config.xml. This used library from http://www.mybatis.org/generator/
+**This is used to generate xml, mapper and java entities based on configuration in config.xml. This used library from http://www.mybatis.org/generator/**
 
 Usage:
 - Download and import project into eclipse. Using import gradle instead of import java project.
@@ -17,7 +17,7 @@ Usage:
 - Then run Generator.java to generate code. You will saw the message "Successfully! Please check your mapper, model and xml packages." if run successfully.
 	* package com.duy.mapper: contains XXXMapper.java ( Ex. UserMapper.java )
 	* package com.duy.model: contains entities (ex. User.java )
-	* package com.duy.xml: contains xml queries and result mapping ( ex. User.xml )
+	* package com.duy.xml: contains xml mapping ( ex. User.xml )
 	
 Enjoy it!
 	
