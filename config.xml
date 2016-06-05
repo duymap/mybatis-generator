@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+  <context id="mySQLTables" targetRuntime="MyBatis3">
+
+  	<plugin type="org.mybatis.generator.plugins.MapperConfigPlugin">
+    	<property name="targetProject" value="${generated.source.dir}"/>
+    	<property name="targetPackage" value="test.mapper.config"/>
+    </plugin>
+
+    <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin">
+    </plugin>
+
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+        connectionURL="jdbc:mysql://localhost:3306/your-schema"
+        userId="user"
+        password="pwd">
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="model" targetProject="${generated.source.dir}">
+      <property name="enableSubPackages" value="false" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+
+    <sqlMapGenerator targetPackage="xml" targetProject="${generated.source.dir}">
+      <property name="enableSubPackages" value="false" />
+    </sqlMapGenerator>
+
+    <javaClientGenerator type="XMLMAPPER" targetPackage="mapper" targetProject="${generated.source.dir}">
+      <property name="enableSubPackages" value="false" />
+    </javaClientGenerator>
+
+    <table schema="your-schema" tableName="your-table-name" domainObjectName="your-entity-class-name">
+    	<property name="useActualColumnNames" value="false"/>
+    	<property name="runtimeSchema" value="${@DEFAULT_SCHEMA}"/>
+    </table>
+    <!-- ... -->
+  </context>
+</generatorConfiguration>
