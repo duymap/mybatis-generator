@@ -14,7 +14,7 @@ Usage:
     </table>
 ``` 
 
-- Then run Generator.java to generate code. You will saw the message "Successfully! Please check your mapper, model and xml packages." if ran successfully.
+- Then run Generator.java to generate code. You will saw the message "Successfully! Please check your mapper, model and xml packages." if run successfully.
 	* package com.duy.mapper: contains XXXMapper.java ( Ex. UserMapper.java )
 	* package com.duy.model: contains entities (ex. User.java )
 	* package com.duy.xml: contains xml mapper ( ex. User.xml )
